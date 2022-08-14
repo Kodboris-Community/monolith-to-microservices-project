@@ -12,17 +12,17 @@ The project is split into two parts:
 ### Prerequisites
 The following tools will help you run your project locally as a monolithic application:
 
-- PostgreSQL client, the `psql` command line utility, installed locally. Using PostgreSQL involves a server and a client. The server hosts the database while the client interfaces with it to execute queries. Because we will be creating our server on AWS, we will only need to install a client for our local setup. The easiest way to set this up is with the [https://www.postgresql.org/download/](PostgreSQL Installer). This installer installs a PostgreSQL client in the form of the psql command-line utility. You can see the complete (server and client) installation instructions for [https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql-macos/](Mac, Linux, and Windows). Verify using:
+- PostgreSQL client, the `psql` command line utility, installed locally. Using PostgreSQL involves a server and a client. The server hosts the database while the client interfaces with it to execute queries. Because we will be creating our server on AWS, we will only need to install a client for our local setup. The easiest way to set this up is with the [PostgreSQL Installer](https://www.postgresql.org/download/). This installer installs a PostgreSQL client in the form of the psql command-line utility. You can see the complete (server and client) installation instructions for [Mac, Linux and Windows](https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql-macos/). Verify using:
 
 `psql --version`
 
-- [https://ionicframework.com/docs/intro/cli](Ionic command-line utility) v6 framework to build and run the frontend application locally. In general, Ionic Framework is used to make cross-platform applications using JavaScript. Verify the installation as:
+- [Ionic command-line utility](https://ionicframework.com/docs/intro/cli) v6 framework to build and run the frontend application locally. In general, Ionic Framework is used to make cross-platform applications using JavaScript. Verify the installation as:
 
 `ionic --version`
 
-- [https://docs.docker.com/desktop/#download-and-install](Docker Desktop) for running the project locally in a multi-container environment
+- [Docker Desktop](https://docs.docker.com/desktop/#download-and-install) for running the project locally in a multi-container environment
 
-- [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html](AWS CLI v2) for interacting with AWS services via your terminal. After installing the AWS CLI, you will also have to configure the access profile locally.
+- [AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) for interacting with AWS services via your terminal. After installing the AWS CLI, you will also have to configure the access profile locally.
   
   - Create an IAM user with Admin privileges on the AWS web console. Copy its Access key.
   - Configure the access profile locally using the Access key generated above:
@@ -32,7 +32,7 @@ aws configure
 aws iam list-users
 ```
 
-- [https://kubernetes.io/docs/tasks/tools/#kubectl](Kubectl) command-line utility to communicate with Kubernetes clusters
+- [Kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl) command-line utility to communicate with Kubernetes clusters
 
 - The setup depends on the Node Package Manager (NPM). You will need to download and install Node from [https://nodejs.com/en/download](https://nodejs.org/en/download/). This will allow you to be able to run `npm` commands.
 
@@ -189,11 +189,13 @@ Log in to https://hub.docker.com/ and create four public repositories - each rep
 *Note: The names of the repositories are exactly the same as the `image name` specified in the docker-compose-build.yaml file.*
 
 ### 2. Setup CircleCI — A continuous integration and delivery platform
-[https://circleci.com/](CircleCI) will be our tool of choice for Continuous Integration. It’s straightforward, popular, and comes with 1000 free monthly build minutes.
+[CircleCI](https://circleci.com/) will be our tool of choice for Continuous Integration. It’s straightforward, popular, and comes with 1000 free monthly build minutes.
 
-Head over to [https://github.com/marketplace](GitHub’s marketplace) and set up a plan.
+Head over to [Github's marketplace](https://github.com/marketplace) and set up a plan.
 
+Set up your Dockerhub username and password in the Circle CI's project settings, so that they can be used inside of `config.yml` file while pushing images to the Dockerhub.
 
+Add a `config.yml` configuration file to the project directory (locally).
 
 
 ## Tips
