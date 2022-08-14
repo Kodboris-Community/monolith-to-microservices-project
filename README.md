@@ -189,6 +189,9 @@ Log in to https://hub.docker.com/ and create four public repositories - each rep
 *Note: The names of the repositories are exactly the same as the `image name` specified in the docker-compose-build.yaml file.*
 
 ### 2. Setup CircleCI — A continuous integration and delivery platform
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/richie-omondi/cd0354-monolith-to-microservices-project/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/richie-omondi/cd0354-monolith-to-microservices-project/tree/main)
+
 [CircleCI](https://circleci.com/) will be our tool of choice for Continuous Integration. It’s straightforward, popular, and comes with 1000 free monthly build minutes.
 
 Head over to [Github's marketplace](https://github.com/marketplace) and set up a plan.
